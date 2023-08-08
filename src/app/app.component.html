@@ -1,13 +1,45 @@
-<form [formGroup]="form" class="ngg-form" (ngSubmit)="submit()" #ngFormRef="ngForm">
-    <div class="form-control required" formControlWrapper>
-        <label class="form-control-title"> Full Name</label>
-        <input type="text" pInputText formControlName="name" isRequired/>
-        <span *hasError="'required'" class="error-message">Name field is required</span>
-        <!-- <span class="error-message" *ngIf="checkRequired('name')">Name field is required</span> -->
-    </div>
-    <div class="form-control required">
-        <label class="form-control-title"> Email</label>
-        <input type="text" pInputText formControlName="email" />
-    </div>
-    <button pButton pRipple type="submit" label="Submit" class="p-button-success"></button>
+<form
+  [formGroup]="form"
+  class="ng-form"
+  (ngSubmit)="submit()"
+  #ngFormRef="ngForm"
+  ngoForm
+>
+  <div class="form-control required">
+    <label class="form-control-title"> Full Name</label>
+    <input
+      type="text"
+      pInputText
+      [formControl]="form.controls.name"
+      label="Full Name"
+      ngoFormControl
+    />
+  </div>
+  <div class="form-control required">
+    <label class="form-control-title"> Email</label>
+    <input
+      type="text"
+      pInputText
+      [formControl]="form.controls.email"
+      label="Email"
+      ngoFormControl
+    />
+  </div>
+  <div class="form-control required">
+    <label class="form-control-title">Age</label>
+    <input
+      type="text"
+      pInputText
+      [formControl]="form.controls.age"
+      label="Age"
+      ngoFormControl
+    />
+  </div>
+  <button
+    pButton
+    pRipple
+    type="submit"
+    label="Submit"
+    class="p-button-success"
+  ></button>
 </form>
