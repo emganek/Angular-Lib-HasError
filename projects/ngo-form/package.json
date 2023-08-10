@@ -1,0 +1,18 @@
+{
+  "name": "ngo-form",
+  "version": "0.0.1",
+  "description": "This library works with reactive form and support to dynamic show validation error message",
+  "keywords": ["ngo", "gravin", "validation", "error", "message"],
+  "author": {
+    "name": "Gravin Nguyen",
+    "email": "nickphuthoi12399@gmail.com"
+  },
+  "peerDependencies": {
+    "@angular/common": "^16.1.0",
+    "@angular/core": "^16.1.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}

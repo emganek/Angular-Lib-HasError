@@ -3,7 +3,6 @@ import { FormGroup } from '@angular/forms';
 
 @Directive({
   selector: '[ngoForm]',
-  standalone: true,
   host: { '(submit)': 'onSubmit()' },
 })
 export class NgoFormDirective {

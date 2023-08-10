@@ -28,8 +28,6 @@ export const ERROR_LIST: { [key in ErrorTypes]: (...param: any) => string } = {
 
 @Component({
   selector: 'ngo-error-mesage',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './ngo-error-mesage.component.html',
   styleUrls: ['./ngo-error-mesage.component.scss'],
 })
@@ -37,9 +35,9 @@ export class NgoErrorMesageComponent {
   fieldName: string = '';
   _error: string = '';
   errorMessage = '';
-  requiredLength: number;
-  minValue: number;
-  maxValue: number;
+  requiredLength!: number;
+  minValue!: number;
+  maxValue!: number;
 
   get error() {
     return this._error;

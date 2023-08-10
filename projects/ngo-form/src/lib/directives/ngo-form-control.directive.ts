@@ -14,17 +14,16 @@ import { Observable, Subject, Subscription, merge } from 'rxjs';
 
 @Directive({
   selector: '[ngoFormControl]',
-  standalone: true,
   host: { '(blur)': 'onBlur()', '[class.ngo-has-error]': 'error' },
 })
 export class NgoFormControlDirective implements OnInit, OnDestroy {
-  @Input() formControl: FormControl;
+  @Input() formControl!: FormControl;
   @Input() label = '';
 
   error = '';
-  requireLength: number;
-  minValue: number;
-  maxValue: number;
+  requireLength!: number;
+  minValue!: number;
+  maxValue!: number;
   componentRef: ComponentRef<NgoErrorMesageComponent>;
   subscription: Subscription;
   formSubmit$: Observable<any>;
@@ -45,7 +44,6 @@ export class NgoFormControlDirective implements OnInit, OnDestroy {
       this.blur$,
       this.valueControlChange$
     ).subscribe(() => {
-      console.log('my control', this.formControl);
       if (
         this.formControl.errors &&
         (this.formControl.touched || this.formControl.dirty)

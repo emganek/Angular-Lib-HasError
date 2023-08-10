@@ -12,11 +12,7 @@ import {
 } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { Validators } from '@angular/forms';
-import { FormControlWrapperDirective } from './directives/form-control-wrapper.directive';
-import { HasErrorDirective } from './directives/has-error.directive';
-import { NgoFormDirective } from './directives/ngo-form.directive';
-import { NgoFormControlDirective } from './directives/ngo-form-control.directive';
-import { NgoErrorMesageComponent } from './components/ngo-error-mesage/ngo-error-mesage.component';
+import { NgoFormModule } from 'my-first-lib';
 
 @Component({
   selector: 'app-root',
@@ -28,11 +24,7 @@ import { NgoErrorMesageComponent } from './components/ngo-error-mesage/ngo-error
     RouterOutlet,
     ButtonModule,
     InputTextModule,
-    FormControlWrapperDirective,
-    HasErrorDirective,
-    NgoFormDirective,
-    NgoFormControlDirective,
-    NgoErrorMesageComponent,
+    NgoFormModule
   ],
   providers: [FormControl],
   templateUrl: './app.component.html',
